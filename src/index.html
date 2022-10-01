@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>fortnite</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+    <section class="container">
+        <h1>
+            <span class="title">Hey!</span>
+        </h1>
+    </section>
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+<script>
+    $(document).ready(function() {
+    $(".title").lettering();
+  });
+  
+  $(document).ready(function() {
+    animation();
+  }, 1000);
+  
+  
+  function animation() {
+    var title1 = new TimelineMax();
+    title1.staggerFromTo(".title span", 0.5, 
+    {ease: Back.easeOut.config(1.7), opacity: 0, bottom: -80},
+    {ease: Back.easeOut.config(1.7), opacity: 1, bottom: 0}, 0.05);
+  }
+</script>
+</html>
